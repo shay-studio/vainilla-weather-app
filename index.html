@@ -40,39 +40,46 @@
             </div>
           </form>
           <div class="overview">
-            <h1 id="city"></h1>
+            <h1 id="city">New York</h1>
             <ul>
-              <li>Last updated: <span id="date"></span></li>
-              <li id="description"></li>
+              <li>Last updated: <span id="date">Tuesday 13:50h</span></li>
+              <li id="description">Clear</li>
             </ul>
           </div>
           <div class="row">
             <div class="col-6">
               <div class="clearfix weather-temperature">
-                <img src="" alt="Clear" id="icon" class="float-left" />
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  alt="Clear"
+                  id="icon"
+                  class="float-left"
+                />
                 <div class="float-left">
-                  <strong id="temperature"></strong
-                  ><span class="units"> °C</span>
+                  <strong id="temperature">13</strong
+                  ><span class="units">°C</span> |
+                  <span class="units">°F</span>
                 </div>
               </div>
             </div>
             <div class="col-6">
               <ul>
+                <li>Precipitations: <span id="humidity"></span>%</li>
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span> m/h</li>
               </ul>
             </div>
           </div>
           <div class="weather-forecast" id="forecast"></div>
+          <small>
+            <a
+              href="https://github.com/wecodeschool/vanilla-weather-app"
+              target="_blank"
+              >Open-source code</a
+            >
+            by Chaimae Bouzalhad
+          </small>
         </div>
-        <small>
-          <a
-            href="https://github.com/wecodeschool/vanilla-weather-app"
-            target="_blank"
-            >Open-source code</a
-          >
-          by Matt Delac
-        </small>
       </div>
     </div>
     <script src="src/app.js"></script>
