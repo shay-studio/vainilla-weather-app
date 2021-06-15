@@ -61,9 +61,20 @@ function displayTemperature(response) {
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
 }
+//Search Bar
 
-let city = "Barcelona";
-let apiKey = "3b640c0f817d39516bf582b1b906ce4f";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "3b640c0f817d39516bf582b1b906ce4f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+function searchCity(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+search("Barcelona");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", searchCity);
