@@ -11,6 +11,10 @@
       crossorigin="anonymous"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d024442337.js"
+      crossorigin="anonymous"
+    ></script>
 
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
@@ -24,7 +28,7 @@
               <div class="col-9">
                 <input
                   type="search"
-                  placeholder="Type a city.."
+                  placeholder="Type a city..."
                   class="form-control"
                   id="city-input"
                   autocomplete="off"
@@ -42,7 +46,7 @@
           <div class="overview">
             <h1 id="city"></h1>
             <ul>
-              <li>Last updated: <span id="date"></span></li>
+              <li>Date: <span id="date"></span></li>
               <li id="description"></li>
             </ul>
           </div>
@@ -61,19 +65,26 @@
                 </div>
               </div>
             </div>
-            <div class="col-6">
-              <ul>
-                <li>Pressure: <span id="pressure"></span>%</li>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span> m/h</li>
-              </ul>
+          </div>
+          <div class="row weather-data">
+            <div class="col-4 pressure-container">
+              <i class="far fa-clock"></i>
+              Pressure: <span id="pressure"></span> mbar
+            </div>
+            <div class="col-4 humidity-container">
+              <i class="fas fa-water"></i>
+              Humidity: <span id="humidity"></span> %
+            </div>
+            <div class="col-4 wind-container">
+              <i class="fas fa-wind"></i>
+              Wind: <span id="wind"></span> m/h
             </div>
           </div>
           <div class="weather-forecast" id="forecast"></div>
         </div>
-        <small>
+        <small class="credits">
           <a
-            href="https://github.com/wecodeschool/vanilla-weather-app"
+            href="https://github.com/shay-studio/vainilla-weather-app"
             target="_blank"
             >Open-source code</a
           >
