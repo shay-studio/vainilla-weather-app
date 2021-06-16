@@ -1,5 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f0f9;
 }
 h1 {
   color: rgb(97, 98, 100);
@@ -28,8 +29,9 @@ li:first-letter {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #c4c3d3;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
   border-radius: 5px;
+  background-color: #fff;
 }
 
 .weather-app-wrapper {

@@ -37,7 +37,7 @@ function displayTemperature(response) {
 
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
-  let precipitationsElement = document.querySelector("#precipitations");
+  let pressureElement = document.querySelector("#pressure");
 
   //Date
 
@@ -58,7 +58,7 @@ function displayTemperature(response) {
 
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  precipitationsElement.innerHTML = response.data;
+  pressureElement.innerHTML = Math.round(response.data.main.pressure);
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
