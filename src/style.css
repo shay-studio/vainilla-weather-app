@@ -131,14 +131,17 @@ i {
 
 .weather-forecast-date {
   color: rgb(10, 10, 10);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .weather-forecast span {
   color: rgb(97, 98, 100);
   font-size: 14px;
+  text-align: center;
 }
 .weather-forecast-temp-max {
   font-weight: 100;

@@ -1,3 +1,35 @@
+//Forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", ,];
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+              <div class="col-2">
+                <div class="weather-forecast-date">${day}</div>
+
+                <img
+                  src="https://images.vexels.com/media/users/3/205087/isolated/preview/a41d84a485d960a7d929fd95ece1acf1-weather-stroke-icon-by-vexels.png"
+                  alt=""
+                  width="50"
+                />
+                <div class="weather-forecast-temperature">
+                  <span class="weather-forecast-temp-max">20</span>
+                  <span class="weather-forecast-temp-min">12</span>
+                </div>
+              </div>
+              `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function formatDate(timestemp) {
   //Calculate the date
 
@@ -110,4 +142,5 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
+displayForecast();
 search("Barcelona");
