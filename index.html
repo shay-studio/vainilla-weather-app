@@ -43,20 +43,21 @@
               </div>
             </div>
           </form>
-          <div class="overview">
-            <i class="far fa-compass"></i>
+          
+          <div class="row">
+            <div class="col-6 overview">
+             <i class="far fa-compass"></i>
             <span class="location">Your Location Now</span>
-
-            <h1 id="city"></span>,
-            <h2 id="country"></span>
-
+              <br>
+              <h1 id="city"></h1>,
+              <h2 id="country"></h2>
             <ul>
               <li>Date: <span id="date"></span></li>
               <li id="description"></li>
             </ul>
+            </div> 
           </div>
-          <div class="row">
-            <div class="col-6">
+          <div class="overview">
               <div class="clearfix weather-temperature">
                 <img src="" id="icon" class="float-left" />
                 <div class="float-left">
@@ -68,17 +69,16 @@
                 </div>
               </div>
             </div>
-          </div>
           <div class="row weather-data">
-            <div class="col-4 pressure-container">
+            <div class="col-3 pressure-container">
               <i class="far fa-clock"></i>
-              Pressure: <span id="pressure"></span> mbar
+              Pressure: <span id="pressure"></span> 
             </div>
-            <div class="col-4 humidity-container">
+            <div class="col-3 humidity-container">
               <i class="fas fa-water"></i>
               Humidity: <span id="humidity"></span> %
             </div>
-            <div class="col-4 wind-container">
+            <div class="col-3 wind-container">
               <i class="fas fa-wind"></i>
               Wind: <span id="wind"></span> m/h
             </div>

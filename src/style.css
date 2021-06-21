@@ -4,6 +4,15 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 }
+h1,h2 {
+  color: #101010;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 60px;
+  margin-bottom: 0;
+  display: inline;
+}
+
 
 ul {
   margin: 0;
@@ -33,19 +42,19 @@ li:first-letter {
 
 .weather-app-wrapper {
   max-width: 700px;
-  margin: 100px auto;
+  margin: 50px auto;
 }
 
 .weather-temperature img {
-  margin-right: 6px;
-  height: 80px;
-  width: 80px;
+  margin-right: 10px;
+  height: 100px;
+  width: 100px;
 }
 
 .weather-temperature strong {
   color: rgb(33, 33, 33);
   line-height: 1;
-  font-size: 64px;
+  font-size: 80px;
   font-weight: 400;
 }
 
@@ -86,12 +95,11 @@ a:hover {
 }
 
 .weather-data {
-  text-align: center;
-  height: 30px;
-  color: #fff;
+  color: rgb(97, 98, 100);
   font-size: 14px;
   font-weight: 100;
-  margin: 30px auto;
+  margin: 20px 0;
+ 
 }
 
 #pressure,
@@ -100,20 +108,13 @@ a:hover {
   font-weight: 400;
 }
 
-.pressure-container {
-  background-color: #fd6660;
-  padding-top: 2px;
+.pressure-container, .humidity-container, .wind-container {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+
 }
 
-.humidity-container {
-  background-color: #6b2aff;
-  padding-top: 2px;
-}
-
-.wind-container {
-  background-color: #63c5f9;
-  padding-top: 2px;
-}
 
 i {
   padding: 5px;
@@ -154,20 +155,14 @@ i {
   padding-bottom: 10px;
 }
 
-#city {
-  color: #101010;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 60px;
-  margin-bottom: 0;
-}
 
-#country {
-  font-size: 20px;
-  color: #101010;
-  font-weight: 400;
-}
 
+
+
+.location{
+  color: rgb(97, 98, 100);
+  font-size: 14px;
+}
 .fa-compass {
   color: rgb(97, 98, 100);
 }
