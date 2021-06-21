@@ -1,6 +1,7 @@
 //Forecast
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
 
@@ -58,7 +59,12 @@ function formatDate(timestemp) {
 
   return `${day} ${hours}:${minutes}`;
 }
-
+//Cordinates
+function getForecast(coordinates) {
+  let apiKey = "3b640c0f817d39516bf582b1b906ce4f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 function displayTemperature(response) {
   console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
@@ -95,6 +101,8 @@ function displayTemperature(response) {
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
+
+  getForecast(response.data.coord);
 }
 //Search Bar
 
@@ -142,5 +150,4 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-displayForecast();
 search("Barcelona");
